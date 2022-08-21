@@ -2,7 +2,7 @@ import sys, struct, string
 from types import *
 from math import *
 
-class compressor:
+class Class:
 	SIGN_MASK = 0xe000
 	XSIGN_MASK = 0x8000
 	YSIGN_MASK = 0x4000
@@ -104,9 +104,9 @@ class compressor:
 			result[2] = -result[2]
 
 		len = sqrt(result[0] * result[0] + result[1] * result[1] + result[2] * result[2])
-		result[0] /= len 
-		result[1] /= len 
-		result[2] /= len 
+		result[0] /= len
+		result[1] /= len
+		result[2] /= len
 		return result
 
 	def to_float(self, value):
@@ -212,5 +212,3 @@ class compressor:
 
 	def float_to_half(self, value):
 		return long(self.int_float_to_half(self.to_int_float(value)))
-
-vertex_compressor = compressor()

@@ -1,7 +1,7 @@
 bl_info = {
     "name": "io_el3D",
     "author": "Youssouf Bologna",
-    "version": (0, 0, 1),
+    "version": (0, 1, 0),
     "blender": (3, 0, 0),
     "location": "File > Import > Import EL3D",
     "description": "Importe les fichiers 3D de landes éternelles",
@@ -12,13 +12,9 @@ bl_info = {
     "category": "Import-Export"
 }
 
-print("debut install")
-
 import bpy
 from .import_el3d import ImportE3DFile
 
-
-print("import ok")
 # Only needed if you want to add into a dynamic menu.
 def menu_func_import(self, context):
     self.layout.operator(ImportE3DFile.bl_idname, text="EL3d Import Operator")
